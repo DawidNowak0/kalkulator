@@ -1,0 +1,65 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Alkatra', cursive;
+}
+
+body{
+    min-height: 100vh;
+    background: linear-gradient(to top, rgba(216, 69, 36, 1.0), rgba(68, 37, 147, 1.0));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons{
+    height: 65vh;
+    min-width: 400px;
+    max-width: 400px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+button{
+    box-shadow: 10px 19px 56px -20px rgba(68, 37, 147, 1.0);
+    margin: 3px;
+    font-family: 'Alkatra', cursive;
+    background-color: rgb(207,76,124);
+    outline: none;
+    border: none;
+}
+
+.display{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+    padding-right: 10px;
+    color: white;
+    min-height: 15vh;
+    max-height: 15vh;
+}
+
+.currentNumber{
+    font-size: 35px;
+}
+
+.previousNumber{
+    font-size: 25px;
+}
+
+.sign{
+    font-size: 25px;
+}
+
+.clear{
+    grid-column: 1/3;
+}
+
+.equal{
+    grid-column: -3/-1;
+}
