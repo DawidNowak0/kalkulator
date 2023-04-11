@@ -32,6 +32,7 @@ equalBtn.addEventListener('click', showResult);
 function number(){
     if(this.textContent === '.' && currentNumber.innerHTML.includes('.')) return;
     if(this.textContent === '.' && currentNumber.innerHTML === '') return currentNumber.innerHTML = '0.';
+    if(currentNumber.innerHTML === '0') return currentNumber.innerHTML = this.textContent;
     currentNumber.innerHTML += this.textContent;
 }
 
