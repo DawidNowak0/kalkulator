@@ -1,33 +1,17 @@
 const currentNumber = document.querySelector('.currentNumber');
-
 const sign = document.querySelector('.sign');
-
 const previousNumber = document.querySelector('.previousNumber');
-
 const clearBtn = document.querySelector('.clear');
-
 const numberBtn = document.querySelectorAll('.number');
-
 const operatorsBtn = document.querySelectorAll('.operator');
-
 const equalBtn = document.querySelector('.equal');
-
 
 let result = '';
 
-
-
-
 clearBtn.addEventListener('click', clear);
-
 numberBtn.forEach((button) => button.addEventListener('click', number));
-
 operatorsBtn.forEach((button) => button.addEventListener('click', operate));
-
 equalBtn.addEventListener('click', showResult);
-
-
-
 
 function number(){
     if(this.textContent === '.' && currentNumber.innerHTML.includes('.')) return;
@@ -81,7 +65,6 @@ function showResult(){
     currentNumber .innerHTML= result;
     previousNumber.innerHTML = '';
     sign.innerHTML = '';
-
 }
 
 function clear(){
