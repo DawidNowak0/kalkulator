@@ -1,8 +1,21 @@
-*, ::before, ::after{
+:root {
+    --font: white;
+    --gradient-primary: #1557A7;
+    --gradient-secondary: #436C54;
+    --box-shadow: rgba(68, 37, 147, 1.0);
+    --button: #80b2ee;
+}
+
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
+    border: 0;
+    line-height: 1.4em;
+    vertical-align: baseline;
+    text-decoration: none;
+    outline: 0;
+    font-size: 1.1rem;
+  }
 
 html{
     font-family: 'Alkatra', cursive;
@@ -10,7 +23,7 @@ html{
 
 body{
     min-height: 100vh;
-    background: linear-gradient(to top, rgba(216, 69, 36, 1.0), rgba(68, 37, 147, 1.0));
+    background: linear-gradient(135deg, var(--gradient-primary), var(--gradient-secondary));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,10 +38,10 @@ body{
 }
 
 button{
-    box-shadow: 10px 19px 56px -20px rgba(68, 37, 147, 1.0);
+    box-shadow: 10px 19px 56px -20px var(--box-shadow);
     margin: 3px;
     font-family: 'Alkatra', cursive;
-    background-color: rgb(207,76,124);
+    background-color: var(--button);
     outline: none;
     border: none;
 }
@@ -39,7 +52,7 @@ button{
     justify-content: space-between;
     text-align: right;
     padding-right: 10px;
-    color: white;
+    color: var(--font);
     min-height: 15vh;
     max-height: 15vh;
 }

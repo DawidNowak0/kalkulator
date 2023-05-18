@@ -31,7 +31,7 @@ equalBtn.addEventListener('click', showResult);
 
 function number(){
     if(this.textContent === '.' && currentNumber.innerHTML.includes('.')) return;
-    if(this.textContent === '.' && currentNumber.innerHTML === '') return currentNumber.innerHTML = '0.';
+    if(this.textContent === '.' && currentNumber.innerHTML === '0') return currentNumber.innerHTML = '0.';
     if(currentNumber.innerHTML === '0') return currentNumber.innerHTML = this.textContent;
     currentNumber.innerHTML += this.textContent;
 }
@@ -85,7 +85,7 @@ function showResult(){
 }
 
 function clear(){
-    currentNumber.innerHTML = '';
+    currentNumber.innerHTML = '0';
     previousNumber.innerHTML = '';
     sign.innerHTML = '';
     result = '';
